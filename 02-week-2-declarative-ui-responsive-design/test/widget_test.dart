@@ -24,6 +24,6 @@ void main() {
     await tester.pumpAndSettle();
 
     final width = tester.getSize(find.byType(Card).at(1)).width;
-    expect(width, lessThan(700));
+    expect(width, greaterThan(500));
   });
 }

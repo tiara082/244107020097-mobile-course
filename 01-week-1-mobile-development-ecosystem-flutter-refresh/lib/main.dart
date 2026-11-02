@@ -413,22 +413,22 @@ class _ProfileHomeScreenState extends State<ProfileHomeScreen> {
             const SizedBox(height: 10),
             _buildReflectionCard(
               'Hot Reload vs Hot Restart',
-              'Hot Reload injects code changes into Dart VM preserving state. Hot Restart resets state and restarts app execution.',
+              'Hot Reload injects code changes on the fly while preserving current state. Hot Restart resets state variables and restarts the app from main().',
             ),
             const SizedBox(height: 8),
             _buildReflectionCard(
               'Declarative UI & State',
-              'UI is a function of state: UI = f(State). Calling setState() rebuilds the widget tree and updates modified UI elements.',
+              'Flutter UI reflects current data state. Calling setState() triggers build() to reconstruct the subtree and repaint changed widgets.',
             ),
             const SizedBox(height: 8),
             _buildReflectionCard(
               'Native vs Cross-Platform',
-              'Native (Kotlin/Swift) is suitable for low-level hardware access and intensive graphics. Cross-platform (Flutter) offers fast multi-platform development.',
+              'Native development is best for low-level hardware access and heavy graphics, while Flutter provides faster multi-platform development from one codebase.',
             ),
             const SizedBox(height: 8),
             _buildReflectionCard(
               'Version Control Commits',
-              'Small, descriptive commits facilitate debugging (git bisect), clean code reviews, and structured project progression.',
+              'Small, descriptive commits keep changes easy to review, make bug tracing faster, and document incremental development in a portfolio.',
             ),
             const SizedBox(height: 24),
           ],
