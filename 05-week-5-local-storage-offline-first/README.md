@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 5 Offline-First Architectur
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 5 Offline-First Architectur
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Distinguish appropriate storage paradigms: Key-Value storage (`shared_preferences`) versus Relational Structured Database (`sqflite`).
 * Design and implement an **Offline-First Architecture** where local storage acts as the single source of truth for the user interface.
 * Structure SQLite schemas with CRUD operations, indexing, and transactional integrity for notes and cached posts.
@@ -23,7 +23,7 @@ Mobile Application Development Lab Assignment - Week 5 Offline-First Architectur
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 * **Framework:** Flutter 3.x
 * **Language:** Dart 3.x
 * **Local Relational Database:** `sqflite: ^2.4.1`, `path: ^1.9.0`
@@ -34,7 +34,7 @@ Mobile Application Development Lab Assignment - Week 5 Offline-First Architectur
 
 ---
 
-## 📱 Application Architecture & Key Features
+## Application Architecture & Key Features
 
 ### 1. Repository Pattern & Single Source of Truth
 * **Local First:** UI widgets (`NotesPage`, `NoteDetailPage`, `SettingsPage`) do not read from remote servers directly. All note creation, reading, updating, and querying happen against local SQLite first.
@@ -62,7 +62,7 @@ Mobile Application Development Lab Assignment - Week 5 Offline-First Architectur
 
 ---
 
-## 🚀 How to Run & Test
+## How to Run & Test
 
 1. Navigate to the Week 5 project directory:
    ```bash
@@ -83,16 +83,16 @@ Mobile Application Development Lab Assignment - Week 5 Offline-First Architectur
 
 ---
 
-## 🤖 AI Challenge Documentation: Local Storage Comparison
+## AI Challenge Documentation: Local Storage Comparison
 
 As part of the Week 5 AI Challenge, different Flutter persistence solutions were evaluated to determine the appropriate architecture:
 
 | Storage Solution | Data Paradigm | Querying & Indexing | Transaction / ACID Support | Best Use Case | Suitability for Notes App |
 |---|---|---|---|---|---|
-| **SharedPreferences** | Key-Value (XML / plist) | None (entire file loaded into memory) | No transactions; rewrites full file on write | Small scalar user preferences (theme, onboarding flag, auth tokens) | ❌ **Unsuitable for Notes**: causes high memory consumption and data corruption risks. |
-| **Hive / Isar** | NoSQL Key-Value / Document | Key lookup, box iteration, basic indexing | Lightweight transactions (Hive ACID boxes) | Fast offline caching without SQL schema boilerplate | ⚠️ Viable, but lacks relational constraints, foreign keys, and raw SQL queries. |
-| **sqflite** | Relational SQL (SQLite) | Full SQL queries, B-Tree indexes, full-text search | Full ACID compliance with atomic transactions | Structured business entities, relational data, sync queues | ✅ **Chosen Solution**: battle-tested mobile standard with native SQLite reliability. |
-| **Drift (Moor)** | Reactive Type-Safe SQLite | Type-safe Dart queries + SQL compile-time check | Full SQLite ACID + built-in reactive streams | Complex enterprise apps with frequent schema migrations | ✅ Excellent alternative, but requires heavyweight code-generation (`build_runner`). |
+| **SharedPreferences** | Key-Value (XML / plist) | None (entire file loaded into memory) | No transactions; rewrites full file on write | Small scalar user preferences (theme, onboarding flag, auth tokens) | **Unsuitable for Notes**: causes high memory consumption and data corruption risks. |
+| **Hive / Isar** | NoSQL Key-Value / Document | Key lookup, box iteration, basic indexing | Lightweight transactions (Hive ACID boxes) | Fast offline caching without SQL schema boilerplate | Viable, but lacks relational constraints, foreign keys, and raw SQL queries. |
+| **sqflite** | Relational SQL (SQLite) | Full SQL queries, B-Tree indexes, full-text search | Full ACID compliance with atomic transactions | Structured business entities, relational data, sync queues | **Chosen Solution**: battle-tested mobile standard with native SQLite reliability. |
+| **Drift (Moor)** | Reactive Type-Safe SQLite | Type-safe Dart queries + SQL compile-time check | Full SQLite ACID + built-in reactive streams | Complex enterprise apps with frequent schema migrations | Excellent alternative, but requires heavyweight code-generation (`build_runner`). |
 
 ### Verification & Engineering Decisions:
 1. **Separation of Concerns:** `shared_preferences` is strictly reserved for scalar values (`dark_mode` boolean and `last_opened_at` timestamp string), while `sqflite` handles the relational `notes` and `cached_posts` tables.
@@ -105,7 +105,7 @@ As part of the Week 5 AI Challenge, different Flutter persistence solutions were
 
 ---
 
-## 🧪 Automated Testing Verification
+## Automated Testing Verification
 
 Automated unit and provider tests are implemented in `test/note_test.dart` and run without external dependencies:
 
@@ -114,14 +114,14 @@ flutter test
 ```
 
 ### Test Results Summary (4/4 Passed):
-- ✅ `Note Model Serialization: fromMap is safe against missing fields`
-- ✅ `Note Model Serialization: dirty flag survives serialization`
-- ✅ `NotesProvider with Fake Repository: provider succeeds with a fake repository`
-- ✅ `NotesProvider with Fake Repository: provider fails with a fake repository`
+- `Note Model Serialization: fromMap is safe against missing fields`
+- `Note Model Serialization: dirty flag survives serialization`
+- `NotesProvider with Fake Repository: provider succeeds with a fake repository`
+- `NotesProvider with Fake Repository: provider fails with a fake repository`
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. Why must the note list not be stored in SharedPreferences? What breaks if this rule is violated?
 
@@ -178,7 +178,7 @@ Third, in the repository sample code, the AI tightly coupled database opening in
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
 | Offline Notes List & Cache | Unsynced Dirty Counter & Sync Action |
 |---|---|

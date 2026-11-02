@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 3 ToDo Application Report w
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 3 ToDo Application Report w
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Understand multi-page declarative routing in Flutter using **GoRouter** (`GoRoute`, `context.go`, `context.push`, and route parameters).
 * Understand the core concepts of centralized state management and why `setState` is insufficient for multi-screen state sharing.
 * Implement **Riverpod 2.x** using modern patterns (`ProviderScope`, `ConsumerWidget`, `AsyncNotifier`, `NotifierProvider`, and derived providers).
@@ -22,7 +22,7 @@ Mobile Application Development Lab Assignment - Week 3 ToDo Application Report w
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 * **Framework:** Flutter 3.x
 * **Language:** Dart 3.x
 * **State Management:** `flutter_riverpod: ^2.6.1`
@@ -33,7 +33,7 @@ Mobile Application Development Lab Assignment - Week 3 ToDo Application Report w
 
 ---
 
-## 📱 Application Overview & Key Features
+## Application Overview & Key Features
 
 The project implements a full-featured ToDo application located in [`todo_app/`](./todo_app/):
 
@@ -54,7 +54,7 @@ The project implements a full-featured ToDo application located in [`todo_app/`]
 
 ---
 
-## 🚀 How to Run & Test
+## How to Run & Test
 
 1. Navigate to the `todo_app` project directory:
    ```bash
@@ -75,7 +75,7 @@ The project implements a full-featured ToDo application located in [`todo_app/`]
 
 ---
 
-## 🤖 AI Prompt Challenge Documentation
+## AI Prompt Challenge Documentation
 
 ### Prompt Submitted
 ```text
@@ -96,7 +96,7 @@ Before adopting the generated code into the project, I audited it against modern
 
 ---
 
-## 🧪 Automated Testing Verification
+## Automated Testing Verification
 
 The project includes 16 automated tests covering the `Todo` model, `TodoListNotifier`, derived providers, and widget rendering:
 
@@ -105,26 +105,26 @@ flutter test
 ```
 
 ### Test Results Summary (16/16 Passed):
-- ✅ `Todo Model should create a Todo with required fields`
-- ✅ `Todo Model should create a copy with updated fields using copyWith`
-- ✅ `Todo Model should have value equality`
-- ✅ `TodoListNotifier should initially be in loading state`
-- ✅ `TodoListNotifier should load initial todos after build completes`
-- ✅ `TodoListNotifier should add a new todo`
-- ✅ `TodoListNotifier should toggle a todo completion status`
-- ✅ `TodoListNotifier should delete a todo`
-- ✅ `TodoListNotifier should handle simulateError`
-- ✅ `TodoStatsProvider should calculate stats after todos are loaded`
-- ✅ `TodoStatsProvider should update stats when a todo is toggled`
-- ✅ `FilteredTodosProvider should return all todos when filter is all`
-- ✅ `FilteredTodosProvider should return only completed todos when filter is completed`
-- ✅ `FilteredTodosProvider should return only pending todos when filter is pending`
-- ✅ `TodoApp renders loading indicator initially`
-- ✅ `TodoApp renders list of todos when loaded`
+- `Todo Model should create a Todo with required fields`
+- `Todo Model should create a copy with updated fields using copyWith`
+- `Todo Model should have value equality`
+- `TodoListNotifier should initially be in loading state`
+- `TodoListNotifier should load initial todos after build completes`
+- `TodoListNotifier should add a new todo`
+- `TodoListNotifier should toggle a todo completion status`
+- `TodoListNotifier should delete a todo`
+- `TodoListNotifier should handle simulateError`
+- `TodoStatsProvider should calculate stats after todos are loaded`
+- `TodoStatsProvider should update stats when a todo is toggled`
+- `FilteredTodosProvider should return all todos when filter is all`
+- `FilteredTodosProvider should return only completed todos when filter is completed`
+- `FilteredTodosProvider should return only pending todos when filter is pending`
+- `TodoApp renders loading indicator initially`
+- `TodoApp renders list of todos when loaded`
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. When is `setState` still enough, and when should state be lifted into Riverpod?
 
@@ -157,6 +157,6 @@ Third, the generated UI only handled the happy path and lacked error recovery. I
 
 ---
 
-## 📷 App Screenshots
+## App Screenshots
 
 ![ToDo Application Screenshots](screenshots/image.png)

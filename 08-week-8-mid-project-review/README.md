@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 8 Mid-Semester Project Revi
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 8 Mid-Semester Project Revi
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Conduct a comprehensive mid-semester review of mobile application architecture and code deliverables developed across Weeks 1 to 7.
 * Enforce industrial **GitFlow branching standards** (`main`, `develop`, `feature/*`, `fix/*`) to prevent untested code from reaching production.
 * Audit and standardize commit history using **Conventional Commits** (`feat:`, `fix:`, `refactor:`, `test:`, `docs:`).
@@ -22,21 +22,21 @@ Mobile Application Development Lab Assignment - Week 8 Mid-Semester Project Revi
 
 ---
 
-## 📊 Mid-Semester Milestones Review (Weeks 1–7 Overview)
+## Mid-Semester Milestones Review (Weeks 1–7 Overview)
 
 | Week | Topic | Core Architecture & Key Implementation | Verification Status |
 |---|---|---|---|
-| **01** | Flutter Refresh & Ecosystem | Student Profile App, Hot Reload vs Restart analysis, declarative widget tree. | ✅ Completed (Tests passing) |
-| **02** | Declarative UI & Responsive Design | Responsive breakpoints (`LayoutBuilder`), adaptive multi-column layouts, constraints hygiene. | ✅ Completed (Tests passing) |
-| **03** | Navigation & State Management | Multi-screen declarative routing (`GoRouter`), centralized state (`Riverpod`), tri-state async handling. | ✅ Completed (Tests passing) |
-| **04** | Networking & REST API | Repository pattern, centralized Dio HTTP client, defensive JSON parsing, infinite scroll pagination. | ✅ Completed (7/7 Tests passing) |
-| **05** | Local Storage & Offline-First | SQLite (`sqflite`) relational database, `shared_preferences`, dirty flag sync queue, Last-Write-Wins conflict resolution. | ✅ Completed (4/4 Tests passing) |
-| **06** | Authentication, Security & FCM | Hardware-backed secure storage (`flutter_secure_storage`), Dio 401 token refresh loop guard, FCM 3-state push notifications, deep linking. | ✅ Completed (4/4 Tests passing) |
-| **07** | Feature-First Clean Architecture | Strict layer separation (`presentation/` -> `domain/` <- `data/`), pure Dart entities, dependency inversion, sterility grep proofs (0 hits). | ✅ Completed (3/3 Tests passing) |
+| **01** | Flutter Refresh & Ecosystem | Student Profile App, Hot Reload vs Restart analysis, declarative widget tree. | Completed (Tests passing) |
+| **02** | Declarative UI & Responsive Design | Responsive breakpoints (`LayoutBuilder`), adaptive multi-column layouts, constraints hygiene. | Completed (Tests passing) |
+| **03** | Navigation & State Management | Multi-screen declarative routing (`GoRouter`), centralized state (`Riverpod`), tri-state async handling. | Completed (Tests passing) |
+| **04** | Networking & REST API | Repository pattern, centralized Dio HTTP client, defensive JSON parsing, infinite scroll pagination. | Completed (7/7 Tests passing) |
+| **05** | Local Storage & Offline-First | SQLite (`sqflite`) relational database, `shared_preferences`, dirty flag sync queue, Last-Write-Wins conflict resolution. | Completed (4/4 Tests passing) |
+| **06** | Authentication, Security & FCM | Hardware-backed secure storage (`flutter_secure_storage`), Dio 401 token refresh loop guard, FCM 3-state push notifications, deep linking. | Completed (4/4 Tests passing) |
+| **07** | Feature-First Clean Architecture | Strict layer separation (`presentation/` -> `domain/` <- `data/`), pure Dart entities, dependency inversion, sterility grep proofs (0 hits). | Completed (3/3 Tests passing) |
 
 ---
 
-## 🌳 GitFlow Branching Model & Commit Hygiene
+## GitFlow Branching Model & Commit Hygiene
 
 ### 1. Branch Strategy
 * **`main`:** Protected release branch. Direct commits are strictly forbidden. Code enters only via reviewed Pull Requests from `develop`.
@@ -54,7 +54,7 @@ In accordance with Lab 1 requirements, past unstructured commits were audited an
 
 ---
 
-## 🔁 Pull Request & Peer Review Workflow
+## Pull Request & Peer Review Workflow
 
 ### 1. PR Template Applied: `feat(notes): validate empty title + sanitize input #12`
 * **Problem:** Users were able to save blank notes containing only whitespace characters, creating corrupt entries in SQLite.
@@ -73,7 +73,7 @@ In accordance with Lab 1 requirements, past unstructured commits were audited an
 
 ---
 
-## 🤖 AI Code Review vs Human Decision
+## AI Code Review vs Human Decision
 
 Complete prompt documentation, full AI analysis, and technical evaluations are stored in [`docs/ai-review-vs-decision.md`](docs/ai-review-vs-decision.md).
 
@@ -85,7 +85,7 @@ Complete prompt documentation, full AI analysis, and technical evaluations are s
 
 ---
 
-## ⚙️ Automated Quality Gate (Green Machine CI)
+## Automated Quality Gate (Green Machine CI)
 
 Prior to code review approval, the codebase passed all automated verification checks:
 
@@ -105,7 +105,7 @@ flutter test
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. What separates a blind LGTM from a responsible approve? What does it risk for the team?
 
@@ -142,7 +142,7 @@ One concrete fix implemented following peer review was **input sanitization and 
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
 | Pull Request & Peer Review Discussion | Automated Quality Gate (Green Machine CI) | Mid-Semester Status Dashboard |
 |---|---|---|

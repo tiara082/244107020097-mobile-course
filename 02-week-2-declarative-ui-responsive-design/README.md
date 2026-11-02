@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 2 Academic Overview & Respo
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 2 Academic Overview & Respo
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Understand the declarative UI paradigm and how Flutter manages widgets, configuration, and state.
 * Utilize fundamental layout widgets: `StatelessWidget`, `StatefulWidget`, `Container`, `Row`, `Column`, and `Expanded`.
 * Understand how to combine Material 3 and Cupertino widgets (e.g. `Switch.adaptive`).
@@ -22,7 +22,7 @@ Mobile Application Development Lab Assignment - Week 2 Academic Overview & Respo
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 * **Framework:** Flutter 3.x
 * **Language:** Dart 3.x
 * **Target Platforms:** Android, iOS, Windows Desktop, Web
@@ -30,7 +30,7 @@ Mobile Application Development Lab Assignment - Week 2 Academic Overview & Respo
 
 ---
 
-## 📱 Assignment Overview
+## Assignment Overview
 
 This project implements an **Academic Overview & Responsive Dashboard** in Flutter. It demonstrates responsive layout adaptation, custom widget extraction, adaptive light/dark theme switching, and accessibility semantics.
 
@@ -50,7 +50,7 @@ This project implements an **Academic Overview & Responsive Dashboard** in Flutt
 
 ---
 
-## 🚀 How to Run & Test
+## How to Run & Test
 
 1. Navigate to the Week 2 project directory:
    ```bash
@@ -71,7 +71,7 @@ This project implements an **Academic Overview & Responsive Dashboard** in Flutt
 
 ---
 
-## 🤖 AI Prompt Challenge Documentation
+## AI Prompt Challenge Documentation
 
 ### 1. Design Prompt Challenge
 * **Prompt Submitted:**
@@ -135,7 +135,7 @@ This project implements an **Academic Overview & Responsive Dashboard** in Flutt
 
 ---
 
-## 🛠️ Refactoring & Code Quality
+## Refactoring & Code Quality
 
 1. **Extracted Reusable `InfoCard` Widget:** Replaced repeated card code with a single reusable `InfoCard` widget accepting `title`, `value`, `icon`, and `semanticsLabel`.
 2. **Single Named Breakpoint Constant:** Defined `const double kWideBreakpoint = 700.0;` at top-level.
@@ -143,7 +143,7 @@ This project implements an **Academic Overview & Responsive Dashboard** in Flutt
 
 ---
 
-## 🧪 Automated Testing Verification
+## Automated Testing Verification
 
 Automated widget tests were implemented in `test/widget_test.dart` to verify screen size responsiveness:
 
@@ -152,13 +152,13 @@ flutter test
 ```
 
 ### Test Cases Passed:
-- ✅ `Dashboard shows one column on a narrow screen (400x800)`
-- ✅ `Dashboard shows two columns on a wide screen (1200x800)`
-- ✅ `flutter analyze` completed with 0 errors / 0 warnings.
+- `Dashboard shows one column on a narrow screen (400x800)`
+- `Dashboard shows two columns on a wide screen (1200x800)`
+- `flutter analyze` completed with 0 errors / 0 warnings.
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. How does imperative thinking differ from declarative thinking when building UI?
 
@@ -188,7 +188,7 @@ When comparing `GridView` and `LayoutBuilder + Column/Row` using AI, the suggest
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
 | Narrow Screen (< 700px) | Wide Screen (>= 700px) |
 |---|---|

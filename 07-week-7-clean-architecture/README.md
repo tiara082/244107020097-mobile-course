@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 7 Architectural Refactoring
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 7 Architectural Refactoring
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Restructure monolithic Flutter project layers into modular, **Feature-First Clean Architecture**.
 * Implement the five **SOLID principles** within mobile development:
   * **S (Single Responsibility):** Separate UI rendering, domain logic, data models, and external storage.
@@ -28,7 +28,7 @@ Mobile Application Development Lab Assignment - Week 7 Architectural Refactoring
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 * **Framework:** Flutter 3.x
 * **Language:** Dart 3.x
 * **Architecture Pattern:** Feature-First Clean Architecture (`core/`, `features/announcements/`, `features/auth/`)
@@ -39,7 +39,7 @@ Mobile Application Development Lab Assignment - Week 7 Architectural Refactoring
 
 ---
 
-## 🏗️ Architecture & Layer Diagram
+## Architecture & Layer Diagram
 
 Dependencies strictly point inward toward the core business domain:
 
@@ -53,7 +53,7 @@ Dependencies strictly point inward toward the core business domain:
 ┌────────────────────────────────────────────────────────┐
 │                      DOMAIN LAYER                      │
 │        (Entities, Repository Contracts, Use Cases)     │
-│             ★ 100% PURE DART - ZERO FLUTTER ★           │
+│       100% PURE DART - ZERO FLUTTER      │
 └───────────────────────────▲────────────────────────────┘
                             │ Implements (Dependency Inversion)
 ┌───────────────────────────┴────────────────────────────┐
@@ -98,7 +98,7 @@ lib/
 
 ---
 
-## 🔍 Pembuktian Sterilitas Layer (Sterility Grep Proofs)
+## Pembuktian Sterilitas Layer (Sterility Grep Proofs)
 
 Untuk memastikan aturan arsitektur tidak dilanggar secara tidak sengaja, dilakukan dua verifikasi statis:
 
@@ -116,7 +116,7 @@ Get-ChildItem -Path 'lib\features\*\domain', 'lib\core' -Recurse -Filter '*.dart
 
 ---
 
-## 🚀 How to Run & Test
+## How to Run & Test
 
 1. Navigate to the Week 7 project directory:
    ```bash
@@ -141,7 +141,7 @@ Get-ChildItem -Path 'lib\features\*\domain', 'lib\core' -Recurse -Filter '*.dart
 
 ---
 
-## 🤖 AI Challenge & Refactoring Audit
+## AI Challenge & Refactoring Audit
 
 Dokumentasi lengkap mengenai prompt challenge, analisis migrasi berkas, dan perbandingan usulan AI dengan keputusan arsitektur final tersimpan di [`docs/ai-verification.md`](docs/ai-verification.md).
 
@@ -152,7 +152,7 @@ Dokumentasi lengkap mengenai prompt challenge, analisis migrasi berkas, dan perb
 
 ---
 
-## 🧪 Automated Testing Verification
+## Automated Testing Verification
 
 Pengujian unit pada [`test/clean_architecture_test.dart`](test/clean_architecture_test.dart) menguji alur use case sukses dan gagal menggunakan `FakeAnnouncementRepository` independen:
 
@@ -161,13 +161,13 @@ flutter test
 ```
 
 ### Hasil Uji Otomatis (3/3 Passed):
-- ✅ `GetAnnouncements returns entities from a fake repository`
-- ✅ `GetAnnouncement returns a failure when the item is missing`
-- ✅ `formatDate and routeFromMessage are pure helpers`
+- `GetAnnouncements returns entities from a fake repository`
+- `GetAnnouncement returns a failure when the item is missing`
+- `formatDate and routeFromMessage are pure helpers`
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. Mengapa interface repository harus berada di domain, bukan di data? Apa yang rusak jika posisinya dibalik?
 
@@ -210,7 +210,7 @@ Ketika meninjau draf usulan yang diberikan oleh AI untuk refactoring Week 7:
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
 | Halaman Login (Clean Auth Presentation) | Daftar Pengumuman (Domain & Data Flow) | Detail Pengumuman (Clean Deep Link) |
 |---|---|---|

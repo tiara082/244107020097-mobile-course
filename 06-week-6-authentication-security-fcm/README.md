@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 6 Security, Token-Based Aut
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 6 Security, Token-Based Aut
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Understand authentication workflows (JWT, Firebase Auth, OAuth SSO) and the fundamental differences between ID tokens, access tokens, and refresh tokens.
 * Enforce mobile application security by storing sensitive credentials solely inside hardware-backed secure storage (`flutter_secure_storage`) rather than plaintext preferences.
 * Implement an automated token refresh cycle in Dio interceptors with loop-prevention guards (`extra['retried'] = true`) and auto-logout on session expiration.
@@ -23,7 +23,7 @@ Mobile Application Development Lab Assignment - Week 6 Security, Token-Based Aut
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 * **Framework:** Flutter 3.x
 * **Language:** Dart 3.x
 * **HTTP Client:** `dio: ^5.8.0+1`
@@ -36,7 +36,7 @@ Mobile Application Development Lab Assignment - Week 6 Security, Token-Based Aut
 
 ---
 
-## 📱 Application Architecture & Key Features
+## Application Architecture & Key Features
 
 ### 1. Route Guard & Reactive Authentication
 * **GoRouter Redirect Guard:** Enforces strict access control in [`lib/main.dart`](lib/main.dart). If a user is not authenticated, any navigation attempt is intercepted and redirected to `/login`. Upon successful sign-in, the user is navigated to `/`.
@@ -60,17 +60,17 @@ Mobile Application Development Lab Assignment - Week 6 Security, Token-Based Aut
 
 ---
 
-## 📲 Matriks Pengujian Tiga State Notifikasi (FCM Test Matrix)
+## Matriks Pengujian Tiga State Notifikasi (FCM Test Matrix)
 
 | State Aplikasi | Perilaku Sistem (Expected Behavior) | Mekanisme Handler | Hasil Verifikasi |
 |---|---|---|---|
-| **Foreground** *(Aplikasi sedang aktif dibuka)* | Banner notifikasi melayang (heads-up) tidak ditampilkan otomatis oleh OS. Aplikasi menangkap event dan memicu notifikasi lokal via `flutter_local_notifications`. Mengetuk banner langsung membuka `/pengumuman/:id`. | `FirebaseMessaging.onMessage` + `_local.show()` + `onDidReceiveNotificationResponse` | ✅ Lulus (Banner lokal muncul dan deep link `/pengumuman/3` terbuka) |
-| **Background** *(Aplikasi diminimalkan / berada di task switcher)* | OS menampilkan banner notifikasi sistem di status bar. Mengetuk banner mengembalikan aplikasi ke layar depan dan menavigasikan user ke `/pengumuman/:id`. | Banner bawaan sistem OS + `FirebaseMessaging.onMessageOpenedApp` | ✅ Lulus (Aplikasi resume dan rute berpindah otomatis) |
-| **Terminated** *(Aplikasi ditutup total / swipe-close)* | Notifikasi sistem muncul di status bar. Saat diklik, sistem me-launch aplikasi dari awal (cold boot), membaca payload awal, dan langsung membuka rute pengumuman tujuan. | `FirebaseMessaging.instance.getInitialMessage()` + GoRouter initialization dispatch | ✅ Lulus (Cold boot membaca payload dan mengarahkan ke rute tujuan) |
+| **Foreground** *(Aplikasi sedang aktif dibuka)* | Banner notifikasi melayang (heads-up) tidak ditampilkan otomatis oleh OS. Aplikasi menangkap event dan memicu notifikasi lokal via `flutter_local_notifications`. Mengetuk banner langsung membuka `/pengumuman/:id`. | `FirebaseMessaging.onMessage` + `_local.show()` + `onDidReceiveNotificationResponse` | Lulus (Banner lokal muncul dan deep link `/pengumuman/3` terbuka) |
+| **Background** *(Aplikasi diminimalkan / berada di task switcher)* | OS menampilkan banner notifikasi sistem di status bar. Mengetuk banner mengembalikan aplikasi ke layar depan dan menavigasikan user ke `/pengumuman/:id`. | Banner bawaan sistem OS + `FirebaseMessaging.onMessageOpenedApp` | Lulus (Aplikasi resume dan rute berpindah otomatis) |
+| **Terminated** *(Aplikasi ditutup total / swipe-close)* | Notifikasi sistem muncul di status bar. Saat diklik, sistem me-launch aplikasi dari awal (cold boot), membaca payload awal, dan langsung membuka rute pengumuman tujuan. | `FirebaseMessaging.instance.getInitialMessage()` + GoRouter initialization dispatch | Lulus (Cold boot membaca payload dan mengarahkan ke rute tujuan) |
 
 ---
 
-## 🚀 How to Run & Test
+## How to Run & Test
 
 1. Navigate to the Week 6 project directory:
    ```bash
@@ -95,7 +95,7 @@ Mobile Application Development Lab Assignment - Week 6 Security, Token-Based Aut
 
 ---
 
-## 🤖 AI Challenge & Technical Verification
+## AI Challenge & Technical Verification
 
 Dokumentasi lengkap mengenai prompt challenge, analisis draf awal AI, dan matriks pemeriksaan manual tersimpan di [`docs/ai-verification.md`](docs/ai-verification.md).
 
@@ -107,7 +107,7 @@ Dokumentasi lengkap mengenai prompt challenge, analisis draf awal AI, dan matrik
 
 ---
 
-## 🧪 Automated Testing Verification
+## Automated Testing Verification
 
 Pengujian unit pada [`test/auth_push_test.dart`](test/auth_push_test.dart) menguji parser deep link dan logika sesi tanpa ketergantungan pada runtime Firebase:
 
@@ -116,14 +116,14 @@ flutter test
 ```
 
 ### Hasil Uji Otomatis (4/4 Passed):
-- ✅ `routeFromMessage menangani route kosong dan tanpa slash`
-- ✅ `data payload membawa id pengumuman`
-- ✅ `provider auth membaca status login dari token`
-- ✅ `refresh gagal berarti sesi harus dibersihkan`
+- `routeFromMessage menangani route kosong dan tanpa slash`
+- `data payload membawa id pengumuman`
+- `provider auth membaca status login dari token`
+- `refresh gagal berarti sesi harus dibersihkan`
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. Mengapa refresh token dilarang keras disimpan di SharedPreferences? Apa risikonya jika bocor?
 
@@ -175,7 +175,7 @@ Keempat, pada Dio interceptor saat menangani HTTP 401, AI tidak menyertakan meka
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
 | Halaman Login (Secure Auth) | Beranda Pengumuman & Status Topik |
 |---|---|

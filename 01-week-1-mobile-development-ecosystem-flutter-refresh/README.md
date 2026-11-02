@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 1 Student Profile Applicati
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 1 Student Profile Applicati
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Understand the mobile development ecosystem, comparing native, hybrid, and cross-platform approaches.
 * Understand Flutter's architecture (framework, engine, embedder) and the role of Dart.
 * Set up the development environment (Flutter SDK, Android SDK, VS Code) and verify with `flutter doctor`.
@@ -22,7 +22,7 @@ Mobile Application Development Lab Assignment - Week 1 Student Profile Applicati
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 * **Framework:** Flutter 3.x
 * **Language:** Dart 3.x
 * **Target Platform:** Android (Emulator / Physical Device), Windows Desktop, Web
@@ -30,7 +30,7 @@ Mobile Application Development Lab Assignment - Week 1 Student Profile Applicati
 
 ---
 
-## 📱 Application Overview
+## Application Overview
 This project is a Student Profile application built to fulfill Week 1 lab requirements and mini assignment. Key features include:
 1. **Student Profile Card:** Displays Name, NIM, Class, Department, Email, and Hobbies with an interactive edit dialog.
 2. **Dark & Light Theme:** Toggle switch to seamlessly swap between Dark Mode and Light Mode.
@@ -39,7 +39,7 @@ This project is a Student Profile application built to fulfill Week 1 lab requir
 
 ---
 
-## 🚀 How to Run & Test
+## How to Run & Test
 
 1. Navigate to the Week 1 project directory:
    ```bash
@@ -64,7 +64,7 @@ This project is a Student Profile application built to fulfill Week 1 lab requir
 
 ---
 
-## 🛠️ Setup Problem & Solution
+## Setup Problem & Solution
 
 ### Problem Encountered
 When running commands like `flutter doctor` or `flutter create`, the terminal hung indefinitely without printing any error logs.
@@ -85,7 +85,7 @@ After completing these steps, `flutter doctor` and `flutter run` executed smooth
 
 ---
 
-## 🔄 Hot Reload vs Hot Restart
+## Hot Reload vs Hot Restart
 
 * **Hot Reload (`r` in terminal):**
   * **Mechanism:** Injects updated code changes directly into the running Dart VM and re-runs the `build()` methods.
@@ -99,7 +99,7 @@ After completing these steps, `flutter doctor` and `flutter run` executed smooth
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. When is native development more appropriate than cross-platform development?
 
@@ -127,6 +127,6 @@ For a personal portfolio repository, commit history acts as a transparent log of
 
 ---
 
-## 📷 App Screenshot
+## App Screenshot
 
 ![Student Profile Application Screenshot](screenshots/screenshot.png)

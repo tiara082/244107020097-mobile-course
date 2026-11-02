@@ -4,7 +4,7 @@ Repository containing lab assignments and coursework for the Mobile Application 
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 
 | Field | Detail |
 |-------|--------|
@@ -16,7 +16,7 @@ Repository containing lab assignments and coursework for the Mobile Application 
 
 ---
 
-## 📂 Repository Directory Structure
+## Repository Directory Structure
 
 ```
 244107020097-mobile-course/
@@ -107,7 +107,7 @@ Repository containing lab assignments and coursework for the Mobile Application 
 
 ---
 
-## 🗓️ Weekly Coursework Roadmap
+## Weekly Coursework Roadmap
 
 - [x] **Week 1:** [Mobile Development Ecosystem & Flutter Refresh](./01-week-1-mobile-development-ecosystem-flutter-refresh/)
 - [x] **Week 2:** [Declarative UI & Responsive Design](./02-week-2-declarative-ui-responsive-design/)

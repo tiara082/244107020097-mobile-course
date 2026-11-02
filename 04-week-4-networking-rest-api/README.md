@@ -4,7 +4,7 @@ Mobile Application Development Lab Assignment - Week 4 REST API Integration with
 
 ---
 
-## 👨‍🎓 Student Details
+## Student Details
 * **Name:** Tiara Febrianie
 * **Student ID (NIM):** 244107020097
 * **Class:** TI-3I
@@ -12,7 +12,7 @@ Mobile Application Development Lab Assignment - Week 4 REST API Integration with
 
 ---
 
-## 🎯 Objectives
+## Objectives
 * Understand HTTP, REST API architecture, and JSON data exchange principles.
 * Implement null-safe Dart model deserialization (`fromJson` / `toJson`) with defensive type casting.
 * Apply the **Repository Pattern** to decouple the UI layer from direct networking libraries.
@@ -23,7 +23,7 @@ Mobile Application Development Lab Assignment - Week 4 REST API Integration with
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 * **Framework:** Flutter 3.x
 * **Language:** Dart 3.x
 * **HTTP Client:** `dio: ^5.7.0`
@@ -34,7 +34,7 @@ Mobile Application Development Lab Assignment - Week 4 REST API Integration with
 
 ---
 
-## 📱 Application Overview & Key Features
+## Application Overview & Key Features
 
 1. **Repository Pattern Architecture:**
    * UI components (`PostListPage`, `PagedPostPage`, `PostDetailPage`) never touch Dio directly; they only observe Riverpod providers.
@@ -53,7 +53,7 @@ Mobile Application Development Lab Assignment - Week 4 REST API Integration with
 
 ---
 
-## 🚀 How to Run & Test
+## How to Run & Test
 
 1. Navigate to the Week 4 project directory:
    ```bash
@@ -74,7 +74,7 @@ Mobile Application Development Lab Assignment - Week 4 REST API Integration with
 
 ---
 
-## 🤖 AI Prompt Challenge Documentation
+## AI Prompt Challenge Documentation
 
 ### Prompt Submitted
 ```text
@@ -95,7 +95,7 @@ Explain each part of the code with comments.
 
 ---
 
-## 🧪 Automated Testing Verification
+## Automated Testing Verification
 
 Automated tests in `test/post_test.dart` verify model robustness, error translation, and repository mocking:
 
@@ -104,17 +104,17 @@ flutter test
 ```
 
 ### Test Results Summary (7/7 Passed):
-- ✅ `Post.fromJson is safe against missing fields`
-- ✅ `Comment.fromJson is safe against missing fields`
-- ✅ `friendlyErrorMessage for connection error`
-- ✅ `friendlyErrorMessage for timeout error`
-- ✅ `friendlyErrorMessage for 404 response`
-- ✅ `provider succeeds with a fake repository`
-- ✅ `provider errors with a fake repository`
+- `Post.fromJson is safe against missing fields`
+- `Comment.fromJson is safe against missing fields`
+- `friendlyErrorMessage for connection error`
+- `friendlyErrorMessage for timeout error`
+- `friendlyErrorMessage for 404 response`
+- `provider succeeds with a fake repository`
+- `provider errors with a fake repository`
 
 ---
 
-## 🧠 Lab Reflections
+## Lab Reflections
 
 ### 1. Why is the UI forbidden from calling Dio directly? What breaks if this rule is violated?
 
@@ -156,7 +156,7 @@ Lastly, the AI test only tested the happy path with complete JSON. I added unit 
 
 ---
 
-## 📷 Screenshots
+## Screenshots
 
 | Posts List Screen | Error State & Retry |
 |---|---|
